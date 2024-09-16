@@ -26,3 +26,21 @@
 
 - Class based component - OLD
 - Functional Component - NEW
+
+# React hooks
+
+    They are normal JS utility functions
+    -useState() -> superpowerful state variable -> whenever state variable update, react triggers reconciliation cycle(re-renders the component)
+    -useEffect() -> this gets called after the component is rendered, once render cycle is finished, useEffect is called
+
+# React uses reconciliation algorithm(react fiber)
+
+- Whenever there is change in state variable, react will find the difference between virtual dome and it will
+  re render the component
+
+# Monolith architecture -> all the codes, like API, UI, authentication code, Database code are in same project
+
+# microserver architecture -> here we have different service for different job, all service combined and forms a big app, All services talk to each other and form a big different application
+
+    - Backend is different
+    - Frontend is different

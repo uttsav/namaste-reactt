@@ -1,106 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/** 
- * Header
-    Logo
-    Nav Items
-  
-  Body
-    Search
-    Restuarant Container
-      -Card
-  
-  Footer
-    -copy right 
-    -address and links
-    
- */
-
-const Header = () => (
-  <div className="header">
-    <div className="logo-container">
-      <img
-        className="logo"
-        src="https://dcassetcdn.com/design_img/1889677/444768/444768_10393234_1889677_85203911_image.png"
-      ></img>
-    </div>
-    <div className="nav-items">
-      <ul>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  </div>
-);
-
-const RestaurantCard = (props) => {
-  const {
-    resName,
-    imgSrc,
-    cusines,
-    rating,
-    deliveryTime,
-    costForTwo,
-    areaName,
-  } = props;
-
-  return (
-    <div className="res-card">
-      <img className="res-logo" src={imgSrc}></img>
-      <div className="res-details">
-        <h4 className="res-name">{resName}</h4>
-        <p className="cusines-values">{cusines}</p>
-        <p className="rating-delivery">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            role="img"
-            aria-hidden="true"
-            strokecolor="rgba(2, 6, 12, 0.92)"
-            fillcolor="rgba(2, 6, 12, 0.92)"
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
-            ></circle>
-            <path
-              d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
-              fill="white"
-            ></path>
-            <defs>
-              <linearGradient
-                id="StoreRating20_svg__paint0_linear_32982_71567"
-                x1="10"
-                y1="1"
-                x2="10"
-                y2="19"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#21973B"></stop>
-                <stop offset="1" stopColor="#128540"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-          <span className="rating-delivery-value">
-            {rating} • {deliveryTime} Minutes
-          </span>
-        </p>
-        <p className="cost-for-two">{costForTwo}</p>
-        <p className="areaName">{areaName}</p>
-      </div>
-    </div>
-  );
-};
-
-const imagianaryURL =
-  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-
 const resObj = [
   {
     info: {
@@ -157,7 +54,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/subway-vivekanand-society-race-course-road-rest117666",
       type: "WEBLINK",
@@ -237,7 +134,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/burger-king-crystal-mall-kalawad-road-rest518648",
       type: "WEBLINK",
@@ -319,7 +216,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/kwality-walls-ice-cream-and-more-amin-marg-main-road-star-apartment-rest748877",
       type: "WEBLINK",
@@ -382,7 +279,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/ubq-by-barbeque-nation-crystal-mall-nana-mava-rest105265",
       type: "WEBLINK",
@@ -509,7 +406,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/the-grand-thakar-tgt-jhulelal-nagar-jubeli-chowk-rest85692",
       type: "WEBLINK",
@@ -627,7 +524,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/sargam-food-kasturba-road-rest85860",
       type: "WEBLINK",
@@ -709,7 +606,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/yadav-food-zone-rohini-kotecha-chowk-rest93166",
       type: "WEBLINK",
@@ -798,7 +695,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/adingo-subhash-road-limda-chowk-rest83618",
       type: "WEBLINK",
@@ -898,7 +795,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/the-grand-thakkar-restaurant-kothariya-colony-80-ft-road-rest179018",
       type: "WEBLINK",
@@ -989,7 +886,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/the-shree-parcel-point-kalawad-road-university-road-rest589730",
       type: "WEBLINK",
@@ -1080,7 +977,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/anjali-restaurant-nirmala-road-kalawad-road-nirmala-convent-road-rest140424",
       type: "WEBLINK",
@@ -1143,7 +1040,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/iqbal-restaurant-lohana-para-lakhajiraj-road-rest214923",
       type: "WEBLINK",
@@ -1223,7 +1120,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/the-chefs-kitchen-foods-rajputpara-trikon-baug-chowk-rest563201",
       type: "WEBLINK",
@@ -1302,7 +1199,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/babji-grill-kitchen-beldar-street-sadar-bazar-rest84297",
       type: "WEBLINK",
@@ -1392,7 +1289,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/sonali-restaurant-race-course-vithal-appartment-race-course-road-rest779955",
       type: "WEBLINK",
@@ -1483,7 +1380,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/shreeji-prasadam-dhebar-road-80ftroad-rest129512",
       type: "WEBLINK",
@@ -1570,7 +1467,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/sargam-kitchen-race-course-road-kasturba-road-rest746858",
       type: "WEBLINK",
@@ -1661,7 +1558,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/rajdhani-parcel-point-150-feet-ring-road-150-ft-ring-road-rest651559",
       type: "WEBLINK",
@@ -1749,7 +1646,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/ganesh-restaurant-mavdi-chowk-mavdi-rest223427",
       type: "WEBLINK",
@@ -1829,7 +1726,7 @@ const resObj = [
       },
       ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    analytics: {},
+
     cta: {
       link: "https://www.swiggy.com/city/rajkot/premvatika-restaurant-gautamnagar-ramdevpir-chowk-rest349204",
       type: "WEBLINK",
@@ -1837,33 +1734,4 @@ const resObj = [
   },
 ];
 
-const Body = () => (
-  <div className="body">
-    <div className="search">Search Bar</div>
-    <div className="res-container">
-      {resObj.map((item, index) => (
-        <RestaurantCard
-          resName={item.info.name}
-          cusines={item.info.cuisines.join(",")}
-          rating={item.info.avgRating}
-          deliveryTime={item.info.sla.deliveryTime}
-          imgSrc={imagianaryURL + item.info.cloudinaryImageId}
-          costForTwo={item.info.costForTwo}
-          key={item.info.id}
-          areaName={item.info.areaName}
-        />
-      ))}
-    </div>
-  </div>
-);
-
-const AppLayout = () => (
-  <div className="app">
-    <Header />
-    <Body />
-  </div>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default resObj;
