@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Search from "./Search";
 import Shimmer from "./Shimmer";
 import { SWIGGY_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [resData, setResData] = useState([]);
@@ -35,11 +36,19 @@ const Body = () => {
     setResData(resDataSearch);
   };
 
-  const searchRestaurant = () => {
-    const searchResName = resDataSearch.filter((str) =>
-      str?.info?.name.toLowerCase().includes(searchRes.toLowerCase())
+  const searchRestaurantVal = (str) => {
+    var cusines = str?.info?.cuisines.map((item, index) => item.toLowerCase());
+    return (
+      str?.info?.name.toLowerCase().includes(searchRes.toLowerCase()) ||
+      cusines.includes(searchRes.toLowerCase())
     );
-    setResData(searchResName);
+  };
+
+  const searchRestaurant = () => {
+    const searchResName = resDataSearch.filter(searchRestaurantVal);
+    searchResName.length > 0
+      ? setResData(searchResName)
+      : console.log("No Restuarant Found");
   };
 
   return resData.length === 0 ? (
@@ -86,7 +95,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {resData.map((item, index) => (
-          <RestaurantCard key={item.info.id} resData={item} />
+          <Link to={"/restaurants/" + item.info.id} key={item.info.id}>
+            <RestaurantCard resData={item} />
+          </Link>
         ))}
       </div>
     </div>

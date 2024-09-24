@@ -31,7 +31,10 @@
 
     They are normal JS utility functions
     -useState() -> superpowerful state variable -> whenever state variable update, react triggers reconciliation cycle(re-renders the component)
-    -useEffect() -> this gets called after the component is rendered, once render cycle is finished, useEffect is called
+
+    -useEffect() -> this gets called after the component is rendered, once render cycle is finished, useEffect is called, useEffect is called after every time component is rendered if we have not added any dependedncy array
+    If the dependency array is empty, the use effectr is called on only initialy render
+    If the dependency array is some value, the use effectr is called on only if that particular value is changed
 
 # React uses reconciliation algorithm(react fiber)
 
@@ -44,3 +47,8 @@
 
     - Backend is different
     - Frontend is different
+
+# 2 types of routing in web apps
+
+- Client side Routing
+- Server Side Routing
