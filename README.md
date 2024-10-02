@@ -25,6 +25,8 @@
 ## React Component
 
 - Class based component - OLD
+  -Never update state variable direclty for class based component
+
 - Functional Component - NEW
 
 # React hooks

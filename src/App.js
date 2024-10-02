@@ -7,12 +7,10 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestaurantMenu from "./component/RestaurantMenu";
-import DateComponent from "./component/Date";
 
 const AppLayout = () => (
   <div className="app">
     <Header />
-    <DateComponent />
     <Outlet />
   </div>
 );
