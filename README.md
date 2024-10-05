@@ -38,6 +38,8 @@
     If the dependency array is empty, the use effectr is called on only initialy render
     If the dependency array is some value, the use effectr is called on only if that particular value is changed
 
+    -useParams -> for router[used for routing]
+
 # React uses reconciliation algorithm(react fiber)
 
 - Whenever there is change in state variable, react will find the difference between virtual dome and it will
@@ -54,3 +56,12 @@
 
 - Client side Routing
 - Server Side Routing
+
+# code splitting should always be done
+
+- different names of it are
+  - Code chunking
+  - code splitting
+  - dynamic bundling
+  - Lazy Loading
+  - On demand loading

@@ -4,6 +4,7 @@ import Search from "./Search";
 import Shimmer from "./Shimmer";
 import { SWIGGY_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [resData, setResData] = useState([]);
@@ -50,6 +51,11 @@ const Body = () => {
       ? setResData(searchResName)
       : console.log("No Restuarant Found");
   };
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return <h1>It looks like you are offline check your connection 🔴</h1>;
 
   return resData.length === 0 ? (
     <Shimmer />

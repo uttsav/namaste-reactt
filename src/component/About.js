@@ -44,11 +44,11 @@ class About extends React.Component {
           </p>
         </div>
         <div className="row">
-          {/* This is functional component */}
-          <User />
-
           {/* This is class component */}
           <UserClass />
+
+          {/* This is functional component */}
+          <User />
         </div>
       </>
     );
